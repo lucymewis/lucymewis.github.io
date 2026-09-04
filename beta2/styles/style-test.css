@@ -21,18 +21,25 @@ body {
 
 .profile {
   height: 100vh;
-  height: 100lvh;
+  height: 100dvh;
   overflow: hidden;
 }
 
 .profile-copy {
+  flex: 1 1 0;
+  width: auto;
+  container-type: inline-size;
   padding: 0 clamp(.75rem, 1.5vw, 2rem) 0 clamp(1.25rem, 5.5vw, 7rem);
 }
 
 .profile-copy__inner {
   min-width: 0;
   max-width: 100%;
-  font-size: clamp(2.05rem, calc(1rem + 3.15vw), 5.4rem);
+  font-size: clamp(
+    1.7rem,
+    min(calc(1rem + 3.15vw), 7.1cqw),
+    5.4rem
+  );
 }
 
 .profile-name {
@@ -89,12 +96,22 @@ a.profile-detail {
   margin-top: .6em;
 }
 
+.profile-photo {
+  --photo-width: min(58.333vh, 39.583vw);
+  --photo-width: min(58.333dvh, 39.583vw);
+  --photo-right: clamp(.75rem, 2.25vw, 3rem);
+  --photo-gap: clamp(1rem, 2vw, 2rem);
+
+  flex: 0 0 calc(var(--photo-width) + var(--photo-right) + var(--photo-gap));
+  width: calc(var(--photo-width) + var(--photo-right) + var(--photo-gap));
+}
+
 .profile-photo__frame {
   position: absolute;
-  right: clamp(.75rem, 2.25vw, 3rem);
+  right: var(--photo-right);
   bottom: 0;
-  height: min(84vh, 61vw);
-  height: min(84dvh, 61vw);
+  height: min(84vh, 57vw);
+  height: min(84dvh, 57vw);
   aspect-ratio: 1 / 1.44;
 }
 
@@ -151,21 +168,19 @@ a.profile-detail {
   }
 }
 
-/* TEMPORARY Safari chrome test */
-html,
-body {
-  height: auto !important;
-  min-height: 200lvh !important;
-  overflow: visible !important;
-}
+/* Fix mobile Safari cropping behind controls */
+@supports (-webkit-touch-callout: none) {
+  @media (max-aspect-ratio: 5 / 6) {
+    html,
+    body {
+      height: auto;
+      overflow: visible;
+      touch-action: pinch-zoom;
+    }
 
-.profile {
-  height: 100lvh !important;
-  overflow: visible !important;
-}
-
-body::after {
-  content: "";
-  display: block;
-  height: 100lvh;
+    .profile {
+      height: 100lvh;
+      overflow: visible;
+    }
+  }
 }
