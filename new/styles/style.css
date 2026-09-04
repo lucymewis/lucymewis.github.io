@@ -117,7 +117,7 @@ a.profile-detail {
 .profile-photo {
   --photo-width: min(58.333vh, 39.583vw);
   --photo-width: min(58.333dvh, 39.583vw);
-  --photo-right: clamp(.75rem, 2.25vw, 3rem);
+  --photo-right: clamp(2rem, 5vw, 7rem);
   --photo-gap: clamp(1rem, 2vw, 2rem);
 
   flex: 0 0 calc(var(--photo-width) + var(--photo-right) + var(--photo-gap));
