@@ -1,0 +1,57 @@
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_body.woff2") format("woff2"),url("../fonts/futura-pt_body.woff2") format("woff"),url("../fonts/futura-pt_body.otf") format("opentype");
+	font-display:auto;
+	font-style:normal;
+	font-weight:400;
+	font-stretch:normal;
+}
+
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_body_oblique.woff2") format("woff2"),url("../fonts/futura-pt_body_oblique.woff2") format("woff"),url("../fonts/futura-pt_body_oblique.otf") format("opentype");
+	font-display:auto;
+	font-style:italic;
+	font-weight:400;
+	font-stretch:normal;
+}
+
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_medium.woff2") format("woff2"),url("../fonts/futura-pt_medium.woff2") format("woff"),url("../fonts/futura-pt_medium.otf") format("opentype");
+	font-display:auto;
+	font-style:normal;
+	font-weight:500;
+	font-stretch:normal;
+}
+
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_medium_oblique.woff2") format("woff2"),url("../fonts/futura-pt_medium_oblique.woff2") format("woff"),url("../fonts/futura-pt_medium_oblique.otf") format("opentype");
+	font-display:auto;
+	font-style:italic;
+	font-weight:500;
+	font-stretch:normal;
+}
+
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_heavy.woff2") format("woff2"),url("../fonts/futura-pt_heavy.woff2") format("woff"),url("../fonts/futura-pt_heavy.otf") format("opentype");
+	font-display:auto;
+	font-style:normal;
+	font-weight:700;
+	font-stretch:normal;
+}
+
+@font-face {
+	font-family:"futura-pt";
+	src:url("../fonts/futura-pt_heavy_oblique.woff2") format("woff2"),url("../fonts/futura-pt_heavy_oblique.woff2") format("woff"),url("../fonts/futura-pt_heavy_oblique.otf") format("opentype");
+	font-display:auto;
+	font-style:italic;
+	font-weight:700;
+	font-stretch:normal;
+}
+
+.tk-futura-pt {
+	font-family: "futura-pt",sans-serif;
+}

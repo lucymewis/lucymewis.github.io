@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden; /* prevent scrolling */
+  background: #fff;
+}
+
+/* Page container: full viewport, two columns */
+.page {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;       /* stretch columns vertically */
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 5vw;
+  gap: 4vw;
+}
+
+/* Text column */
+.text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical centering */
+  min-width: 0;               /* allow text to shrink */
+  font-size: min(2vw, 1.2rem); /* scales proportionally */
+}
+
+.text h1 {
+  font-size: 2em;  /* relative to column font-size */
+  font-weight: 600;
+}
+
+.role {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+
+.email {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.email a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.email a:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 3px;
+}
+
+/* Image column */
+.image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;      /* horizontal centering in column */
+  align-items: flex-end;        /* bottom-align image */
+  min-width: 0;                 /* allow shrinking */
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 90%;              /* prevents clipping at bottom */
+  object-fit: contain;
+}
+
+/* Mobile: stack */
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  .image {
+    align-items: center;
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  .image img {
+    max-height: 50vh;
+    width: 100%;
+  }
+}
