@@ -68,10 +68,14 @@ body {
 }
 
 a {
+  --link-color: currentColor;
   color: inherit;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: color-mix(in srgb, var(--link-color) 83.6%, black);
 }
 
 a.profile-detail {
@@ -80,16 +84,30 @@ a.profile-detail {
 }
 
 .text-accent {
-  color: var(--accent);
+  --link-color: var(--accent);
+  color: var(--link-color);
 }
 
-.text-accent:hover,
-.text-accent:focus {
-  color: var(--accent-dim);
+.underline {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
 }
 
-.no-underline {
+.underline:hover,
+.underline:focus {
+  text-decoration-line: none;
+}
+
+.underline-on-hover {
   text-decoration: none;
+}
+
+.underline-on-hover:hover,
+.underline-on-hover:focus {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
 }
 
 .profile-detail--spaced {
