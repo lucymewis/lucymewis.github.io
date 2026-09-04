@@ -151,15 +151,17 @@ a.profile-detail {
   }
 }
 
-/* TEMPORARY iOS Safari toolbar test */
+/* TEMPORARY Safari chrome test */
 html,
 body {
-  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 200lvh !important;
+  overflow: visible !important;
 }
 
 .profile {
-  position: sticky;
-  top: 0;
+  height: 100lvh !important;
+  overflow: visible !important;
 }
 
 body::after {
